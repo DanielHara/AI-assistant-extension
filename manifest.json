@@ -4,11 +4,14 @@
     "description": "Base Level Extension",
     "version": "1.0",
     "action": {
-        "default_popup": "hello.html",
-        "default_icon": "hello_extensions.png"
+        "default_title": "Click to show an alert"
+    },
+    "background": {
+      "service_worker": "background.js"
     },
     "permissions": [
         "tabs",
+        "activeTab",
         "scripting"
     ],
     "host_permissions": [
