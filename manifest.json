@@ -9,10 +9,20 @@
     "background": {
       "service_worker": "background.js"
     },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "externally_connectable": {
+      "matches": ["http://localhost:3000/*"]
+    },
     "permissions": [
         "tabs",
         "activeTab",
-        "scripting"
+        "scripting",
+        "tabs"
     ],
     "host_permissions": [
         "https://*/*"
